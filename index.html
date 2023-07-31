@@ -6,12 +6,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/2621df78fc.js" crossorigin="anonymous"></script>
-  <title>Name</title>
+  <title>Design System</title>
 </head>
 
 <body>
 
-  <h1>Hello World</h1>
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="content_logo">
+        <a href="#"><img src="public/logo.svg" alt="logo"></a>
+        <button id="menuBurger"></button>
+      </div>
+      <!-- lists -->
+      <ul class="lists">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Schedule a Call</a></li>
+      </ul>
+    </nav>
+
+    <!-- Lists Menu Burger -->
+    <ul class="lists_menu_burger">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Schedule a Call</a></li>
+    </ul>
+
+    <!-- bg image header -->
+    <div class="bg_image"></div>
+    <div class="content_title">
+      <h1>Branding & website design agency</h1>
+      <p>We specialize in visual storytelling by creating cohesive brand and website design solutions for small
+        businesses, giving lasting impressions to audiences in a digital world.</p>
+      <a href="#">Learn More</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Design is strategic -->
+    <div class="content_strategic_design">
+      <div class="image_strategic"></div>
+      <article class="content_design">
+        <img class="image_strategic_mobile" src="public/mobile/image-strategic.jpg" alt="image strategic">
+        <div class="content_text_design">
+          <img class="wave_red" src="public/bg-pattern-wave-red.svg" alt="wave red">
+          <h2><span>Design</span> is strategic.</h2>
+          <p>“A well-crafted design strategy consistently produces desired outcomes and brand awareness. We are firm
+            believers that success lies in creative collaboration with our clients.”</p>
+          <a href="#">Schedule a Call<div class="line_underline"></div></a>
+        </div>
+      </article>
+    </div>
+
+    <!-- Our approach for creating a winning brand -->
+    <div class="content_winning_brand">
+      <article>
+        <h2>Our approach for creating a winning brand</h2>
+        <ol>
+          <li>
+            <h3>Brand Strategy</h3>
+            <p>Brand strategy is critical for long-term success. Outshining competitors and capturing the target
+              audience
+              are key.
+            </p>
+          </li>
+          <li>
+            <h3>Brand Design</h3>
+            <p>Keeping the brand design unique and meaningful helps in communicating the brand’s timeless value
+              effectively.
+            </p>
+          </li>
+          <li>
+            <h3>Web Design</h3>
+            <p>A beautifully crafted website is the best tool for brand awareness, and ultimately results in increased
+              revenues.</p>
+          </li>
+        </ol>
+      </article>
+    </div>
+
+    <!-- Brand naming & guidelines -->
+    <div class="content_brand_naming">
+      <article id="carrousel">
+        <div class="content_title_time">
+          <h2 id="title">Lean Product Roadmap</h2>
+          <p><time>2019</time> Project</p>
+        </div>
+      </article>
+      <section>
+        <div class="content_section">
+          <img class="wave_white" src="public/bg-pattern-wave-white.svg" alt="wave white">
+          <h2>Brand naming & guidelines</h2>
+          <div class="arrow">
+            <button id="arrowLeft"><img src="public/icon-arrow-previous.svg" alt="arrow previous"></button>
+            <button id="arrowRight"><img src="public/icon-arrow-next.svg" alt="arrow next"></button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <img src="public/bg-pattern-wave-red.svg" alt="wave red">
+    <h2>Let's build something great together.</h2>
+    <a href="#">Schedule a Call</a>
+  </footer>
 
   <script type="module" src="/js/main.js"></script>
 </body>

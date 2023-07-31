@@ -1,3 +1,575 @@
-h1 {
-    color: red;
+body {
+    font-family: 'Commissioner', sans-serif;
+}
+
+// HEADER
+header {
+    nav {
+        height: 20vh;
+        display: flex;
+
+        .content_logo {
+            width: 100%;
+            height: 100%;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button img {
+                width: 1.4rem;
+            }
+        }
+
+        // lists
+        .lists {
+            display: none;
+        }
+    }
+
+    // Lists Menu Burger
+    .lists_menu_burger {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        right: 7%;
+        background-color: $BgBlack;
+        padding: 1.5rem;
+
+        li {
+            color: $w;
+            text-align: center;
+            width: 100%;
+            padding: 1.4rem 3rem;
+
+            &:last-child {
+                font-weight: bold;
+                background-color: $r;
+
+                &:hover {
+                    background-color: $rH;
+                }
+            }
+        }
+    }
+
+    // bg image header
+    .bg_image {
+        position: relative;
+        width: 100%;
+        height: 15rem;
+        background: url("../public/mobile/image-hero.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    .content_title {
+        padding: 10% 5%;
+
+        h1 {
+            font-size: 2.5rem;
+            width: 20rem;
+        }
+
+        p {
+            line-height: 25px;
+            margin: 1.5rem 0;
+        }
+
+        a {
+            color: $w;
+            font-weight: bold;
+            padding: 1.5rem 2.5rem;
+            background-color: $r;
+
+            &:hover {
+                background-color: $rH;
+            }
+        }
+    }
+}
+
+main {
+
+    // Design is strategic
+    .content_strategic_design {
+        position: relative;
+
+        .image_strategic {
+            display: none;
+            background: url("../public/mobile/image-strategic.jpg") no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 30vh;
+        }
+
+        .content_design {
+            color: $w;
+            background-color: $BgBlack;
+
+            .image_strategic_mobile {
+                width: 100%;
+            }
+
+            .content_text_design {
+                padding: 3rem 1.5rem;
+
+                .wave_red {
+                    transform: translateY(-4rem);
+                    width: 4.5rem;
+                }
+
+                h2 {
+                    font-size: 2.5rem;
+                    width: 75%;
+
+                    span {
+                        color: $r;
+                    }
+                }
+
+                p {
+                    line-height: 25px;
+                    margin: 3rem 0;
+                }
+
+                a {
+                    color: $r;
+                    font-weight: bold;
+
+                    .line_underline {
+                        margin-top: 0.3rem;
+                        border-bottom: solid 0.1rem $r;
+                    }
+
+                    &:hover {
+                        color: $rH;
+                    }
+
+                    &:hover>.line_underline {
+                        border-color: $rH;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Our approach for creating a winning brand
+    .content_winning_brand {
+        article {
+            color: $w;
+            background-color: $r;
+            padding: 6rem 2rem;
+
+            h2 {
+                font-size: 2.2rem;
+                width: 20rem;
+            }
+
+            ol {
+                width: 20rem;
+                counter-reset: lists;
+
+                li {
+                    counter-increment: lists;
+                    margin: 4.2rem 0;
+
+                    h3 {
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 1rem;
+
+                        &::before {
+                            content: "0" counter(lists);
+                            position: absolute;
+                            transform: translate(-0.8rem, -3rem);
+                            font-size: 5rem;
+                            opacity: 0.3;
+                        }
+                    }
+
+                    p {
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Brand naming & guidelines
+    .content_brand_naming {
+        article {
+            position: relative;
+            color: $w;
+            width: 100%;
+            height: 70vh;
+            background: url("../public/image-slide-1.jpg") no-repeat;
+            background-size: cover;
+
+            .content_title_time {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: $lg;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 0.5rem;
+            }
+        }
+
+        section .content_section {
+            color: $w;
+            background-color: $BgBlack;
+            padding: 6rem 5%;
+
+            .wave_white {
+                display: none;
+            }
+
+            h2 {
+                margin-bottom: 2rem;
+                font-size: 2.5rem;
+                width: 20rem;
+            }
+
+            .arrow {
+                display: flex;
+                gap: 1rem;
+
+                img:hover {
+                    filter: brightness(0) saturate(100%) invert(73%) sepia(86%) saturate(726%) hue-rotate(302deg) brightness(101%) contrast(99%);
+                }
+            }
+        }
+    }
+}
+
+// FOOTER
+footer {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+        display: none;
+    }
+
+    h2 {
+        font-size: 2rem;
+        width: 20rem;
+        margin-bottom: 1.5rem;
+    }
+
+    a {
+        color: $w;
+        font-weight: bold;
+        width: fit-content;
+        background-color: $r;
+        padding: 1rem;
+
+        &:hover {
+            background-color: $rH;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    // HEADER
+    header {
+        nav {
+            .content_logo {
+                width: 40%;
+                justify-content: start;
+
+                a {
+                    margin-left: 5%;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            // lists
+            .lists {
+                width: 65%;
+                height: 100%;
+                background-color: $r;
+                padding-left: 1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                li {
+                    margin: 2.4%;
+                    width: 4rem;
+                    color: $w;
+
+                    &:hover {
+                        font-weight: bold;
+                    }
+
+                    &:last-child {
+                        width: fit-content;
+                        font-weight: bold;
+                        background-color: $BgBlack;
+                        padding: 1.5rem 1rem;
+
+                        &:hover {
+                            background-color: $BgBlackH;
+                        }
+                    }
+                }
+            }
+        }
+
+        // bg image header
+        .bg_image {
+            margin-left: 35%;
+            width: 65%;
+            height: 100vh;
+            background-image: url("../public/tablet/image-hero.jpg");
+        }
+
+        .content_title {
+            position: absolute;
+            bottom: 10rem;
+            padding: 0;
+            padding-left: 13%;
+            width: 35rem;
+        }
+    }
+
+    main {
+
+        // Design is strategic
+        .content_strategic_design {
+            position: relative;
+
+            .image_strategic {
+                display: block;
+                background-image: url("../public/tablet/image-strategic.jpg");
+                width: 50%;
+                height: 130vh;
+            }
+
+            .content_design {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 50%;
+                height: 110vh;
+                padding: 8rem 3rem;
+
+                .image_strategic_mobile {
+                    display: none;
+                }
+
+                .content_text_design .wave_red {
+                    transform: translate(-6.7rem, 4rem);
+                }
+            }
+        }
+
+        // Our approach for creating a winning brand
+        .content_winning_brand {
+            position: relative;
+            margin-bottom: 102.9vh;
+
+            article {
+                position: absolute;
+                right: 0;
+                transform: translateY(-20vh);
+                width: 58%;
+
+                h2 {
+                    position: absolute;
+                    color: $b;
+                    transform: translate(-24rem, 12rem);
+                }
+
+                ol {
+                    margin-left: 2.5rem;
+                }
+            }
+        }
+
+        // Brand naming & guidelines
+        .content_brand_naming {
+            position: relative;
+
+            article {
+                margin-left: 40%;
+                width: 60%;
+            }
+
+            section {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+
+                .content_section {
+                    position: relative;
+                    height: 55vh;
+                    padding: 6rem 10%;
+
+                    .wave_white {
+                        position: absolute;
+                        right: 0;
+                        display: block;
+                        width: 4.5rem;
+                        transform: translate(2.2rem, 2rem) rotateY(180deg);
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+
+    // HEADER
+    header {
+        nav {
+            .content_logo {
+                width: 50%;
+
+                a {
+                    margin-left: 20%;
+                }
+            }
+
+            // lists
+            .lists {
+                padding-left: 4rem;
+                width: 50%;
+
+                li:last-child {
+                    padding: 1.5rem 2.5rem;
+                }
+            }
+        }
+
+        // bg image header
+        .bg_image {
+            background-image: url("../public/desktop/image-hero.jpg");
+        }
+
+        .content_title {
+            width: 40rem;
+
+            h1 {
+                font-size: 3.5rem;
+                width: 35rem;
+            }
+
+            p {
+                margin: 2.5rem 0;
+            }
+        }
+    }
+
+    main {
+
+        // Design is strategic
+        .content_strategic_design {
+            .image_strategic {
+                background-image: url("../public/desktop/image-strategic.jpg");
+            }
+
+            .content_design {
+                padding: 8rem 5rem;
+
+                .content_text_design {
+                    h2 {
+                        font-size: 3rem;
+                    }
+
+                    .wave_red {
+                        transform: translate(-9.5rem, 5.5rem) rotateY(0);
+                        width: 6rem;
+                    }
+                }
+            }
+        }
+
+        // Our approach for creating a winning brand
+        .content_winning_brand {
+            article {
+                width: 65%;
+
+                h2 {
+                    font-size: 3rem;
+                    width: 30rem;
+                    transform: translate(-22rem, 12rem);
+                }
+
+                ol {
+                    margin-left: 30%;
+                }
+            }
+        }
+
+        // Brand naming & guidelines
+        .content_brand_naming {
+            article {
+                margin-left: 35%;
+                width: 65%;
+
+                .content_title_time {
+                    padding: 2rem 7rem;
+                }
+            }
+
+            section {
+                .content_section {
+                    padding: 6rem 20%;
+
+                    .wave_white {
+                        width: 6rem;
+                        transform: translate(3rem, 3.5rem);
+                    }
+
+                    h2 {
+                        margin-bottom: 3rem;
+                        font-size: 3rem;
+                        width: 30rem;
+                    }
+                }
+            }
+        }
+    }
+
+    // FOOTER
+    footer {
+        justify-content: start;
+
+        img {
+            transform: translateX(-5rem);
+            display: block;
+            width: fit-content;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            width: 30rem;
+        }
+
+        a {
+            margin-left: 20%;
+        }
+    }
 }
